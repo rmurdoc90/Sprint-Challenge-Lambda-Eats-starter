@@ -60,6 +60,7 @@ export default function OrderPizza(){
             <label htmlFor='size'>
                 What Size 
                 <select id='size' name='size' onChange={inputChange}>
+                    <option value='blank'></option>
                     <option value='Small'>Small</option>
                     <option value='Medium'>Medium</option>
                     <option value='Large'>Large</option>

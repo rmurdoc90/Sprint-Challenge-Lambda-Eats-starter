@@ -13,6 +13,7 @@ export default function OrderPizza(){
         pineapple:'',
         jalapenos:'',
         sauce:'',
+        instructions:'',
 
     })
 
@@ -30,6 +31,7 @@ export default function OrderPizza(){
             pineapple:'',
             jalapenos:'',
             sauce:'',
+            instructions:'',
             })
         })
         .catch(err => console.log(err.response));
@@ -103,7 +105,17 @@ export default function OrderPizza(){
                     onChange={inputChange}
                     />
                 Hot Sauce
-                </label>
+                </label><br/>
+                <label htmlFor='instructions'>
+                Special Instructions
+                <input
+                size='50'
+                type='text'
+                name='instructions'
+                value={formState.instructions}
+                onChange={inputChange}
+                />
+            </label>
                 <pre>{JSON.stringify(post, null, 2)}</pre>
                 <button >Submit</button>
         </form>

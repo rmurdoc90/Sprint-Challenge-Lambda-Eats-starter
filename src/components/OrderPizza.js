@@ -58,7 +58,7 @@ export default function OrderPizza(){
                 onChange={inputChange}
                 />
             </label>
-
+            {formState.name.length < 2 ? <p> Name needs to be atleast 2 characters</p> : null}
             <label htmlFor='size'>
                 What Size 
                 <select id='size' name='size' onChange={inputChange}>
